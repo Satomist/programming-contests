@@ -1,8 +1,8 @@
 function Main(input) {
+	console.log(input.length)
 	input = input.split("\n")
 	const N = parseInt(input[0],10)
-
-	for(var i=0; i<N; i++){
+	for(var i=0; i<25; i++){
 		var C = parseInt(input[i*3+1],10)
 		var I = parseInt(input[i*3+2],10)
 		var P = input[i*3+3].split(" ").map(function (i) {
@@ -22,4 +22,4 @@ function Main(input) {
 	}
 }
 
-Main(require("fs").readFileSync("/dev/stdin", "utf8"))
+Main(require('readtoend').readToEnd(process.stdin, "utf8"));
